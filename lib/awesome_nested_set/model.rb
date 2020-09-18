@@ -79,7 +79,7 @@ module CollectiveIdea #:nodoc:
           end
 
           def nested_set_scope(options = {})
-            options = {:order => { order_column => :asc }}.merge(options)
+            options = {:order => { xorder_column => :asc }}.merge(options)
 
             where(options[:conditions]).order(options.delete(:order))
           end
